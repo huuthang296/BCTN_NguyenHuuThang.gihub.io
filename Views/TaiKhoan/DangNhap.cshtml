@@ -1,0 +1,73 @@
+﻿@model  MiniShopWebNHT.Models.KhachHang
+@{
+    ViewBag.Title = "DangNhap";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<script>
+    function validateLogin() {
+        var x = document.forms["myForm"]["TenDN"].value;
+        var y = document.forms["myForm"]["MatKhau"].value;
+
+        if (x == "" || y == "") {
+            alert("Bạn cần nhập 'Tài Khoản' hoặc 'Mật Khẩu'");
+            return false;
+        }
+    }
+    function disablelogin() {
+        document.getElementById("TenDN").disabled = true;
+        document.getElementById("MatKhau").disabled = true;
+    }
+
+</script>
+<div class="hero-wrap hero-bread" style="background-image: url('/Assets/images/bg_6.jpg');">
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+            <div class="col-md-9 ftco-animate text-center">
+                <p class="breadcrumbs"><span class="mr-2"><a href="@Url.Action("TrangChu", "Home")">Trang Chủ</a></span> <span></span></p>
+                <h1 class="mb-0 bread">Đăng Nhập</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Register Section Begin -->
+<div class="register-login-section spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <div class="login-form">
+                    <h2>ĐĂNG NHẬP</h2>
+                    <form action="/TaiKhoan/DangNhap" method="post" name="myForm">
+                        <div class="group-input">
+                            <label for="username">Tên đăng nhập hoặc địa chỉ email *</label>
+                            <input type="text" id="TenDN" name="TenDN">
+                        </div>
+                        <div class="group-input">
+                            <label for="pass">Mật khẩu *</label>
+                            <input type="text" id="MatKhau" name="MatKhau">
+                        </div>
+                        <div class="group-input gi-check">
+                            <div class="gi-more">
+                                <label for="save-pass">
+                                    Lưu mật khẩu
+                                    <input type="checkbox" id="save-pass">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <a href="#" class="forget-pass">Quên mật khẩu của bạn</a>
+                            </div>
+                        </div>
+                        <button class="site-btn login-btn" id="btnlogin" onclick="return validateLogin()">Đăng Nhập</button>
+                        @*<button type="submit" class="site-btn login-btn">ĐĂNG NHẬP</button>*@
+                    </form>
+                    <div class="switch-login">
+                        <a href="@Url.Action("SignIn", new { type = "Google" })" class="or-login">HOẶC ĐĂNG NHẬP BẰNG GOOGLE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Register Form Section End -->

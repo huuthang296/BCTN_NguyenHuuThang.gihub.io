@@ -1,0 +1,41 @@
+﻿@using MiniShopWebNHT.Models;
+@model List<ChiTietPhieuNhap>
+
+
+@{
+    ViewBag.Title = "EditHoaDon";
+    Layout = "~/Views/LayoutAdmin/_LayoutAdmin.cshtml";
+}
+
+<link href="~/Content/GioHang.css" rel="stylesheet" />
+<div class="Cart-info">
+    <h4>Tổng tiền hóa đơn: <span style="color:red">@string.Format("{0:0,0}", ViewBag.trigia)</span>vnđ</h4>
+    <br />
+    <h5>Thông tin hóa đơn</h5>
+    <table>
+        <thead>
+            <tr>
+                <td>Tên Sản Phẩm</td>
+                <td>Hình Ảnh</td>
+                <td>Số Lượng</td>
+                <td>Thành Tiền</td>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.SanPham.TenSP</td>
+                    <td><a href="~/ViewSP/ChiTietSanPham?MaSp=@item.MaSP"><img src="~/Assets/images/@item.SanPham.HinhAnh" /></a></td>
+                    <td><p>@item.SoLuong</p></td>
+                    <td><span id="DonGia"> @string.Format("{0:0,0}", item.ThanhTien)</span></td>
+                </tr>
+
+
+            }
+
+        </tbody>
+    </table>
+
+</div>

@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "ChiTietSanPhamAdmin";
+    Layout = "~/Views/LayoutAdmin/_LayoutAdmin.cshtml";
+}
+
+
+<link href="~/Assets/css/css/DetailAd.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<div class="title" style="font-size:30px; padding:20px 0px;display:inline-block">
+    <a style="font-family:Georgia" class="navhead" href="@Url.Action("Index","AdminCRUD")"> Trang Chủ </a> <i style="color:#4e9df7" class="material-icons">navigate_next</i><a>@Model.TenSP</a>
+    <hr>
+</div>
+<div class="baotrum">
+    <div class="anh"><img src="~/Assets/images/@Model.HinhAnh" /></div>
+    <div class="noidung">
+        <div id="tenbook">@Model.TenSP</div>
+        <div class="price">
+            @string.Format("{0:0,0}", Model.DonGia) VND
+        </div>
+        <div class="nameauthor">
+            <label for="">Loại Sản Phẩm:</label><label id="lbNXB" for="" style="font-size:larger"> @Model.LoaiSP.TenLoai</label>
+            @*<label for="">Nhà sản xuất:   </label><label for="" style="font-size:larger"> @Model.Nhassanxuat.TenNSX</label>*@
+        </div>
+
+        <div class="status">
+            @if (Model.TrangThai == "True")
+            {
+                <a id="activetrue">Active</a>
+
+            }
+            else if (Model.TrangThai == "False")
+            {
+
+                <a id="activefalse">Cancel</a>
+            }
+        </div>
+        <div id="tieudebook">
+            @Model.MoTa
+        </div>
+        <div class="quanty">
+            <label id="quantity">Size</label><input type="number" name="1" id="qty" min="1" max="@Model.SoLuong">
+        </div>
+        <div class="buttom">
+            <a href="@Url.Action("Index", "AdminCRUD")" class="btnbottom" id="btn-right">Quay lại trang chủ</a>  <a href="" id="btn-left" class="btnbottom">GO GO</a>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+

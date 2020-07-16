@@ -1,0 +1,132 @@
+﻿
+@using MiniShopWebNHT.Models
+@model PagedList.IPagedList<MiniShopWebNHT.Models.MaGiam>
+@using PagedList.Mvc
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/LayoutAdmin/_LayoutAdmin.cshtml";
+
+}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="~/Assets/css/css/IndexAdmin.css" rel="stylesheet" />
+<h4 style=" color:#566787; font-family:" Open Sans", Arial, sans-serif">Quản Lý Mã Giảm</h4>
+<hr />
+
+<!-- Thêm mã phân trang -->
+@*<br />
+    Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
+
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))*@
+
+<!-- Kết thúc -->
+@if (Session["Username"] == null)
+{
+    Response.Redirect(Url.Action("LoginAdmin", "LoginAdmin"));
+}
+
+
+<body>
+    <div class="container">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <a class="themsach" href="@Url.Action("CreateMa","QLMaGiamGia")">Thêm Mã Giảm</a>
+                <div class="row" style="padding-top:10px">
+                    <div class="col-sm-4">
+
+                        <div class="show-entries">
+                            @using (Html.BeginForm("Index", "QLMaGiamGia", FormMethod.Get))
+                            {
+                                <p>
+                                    Show @Html.DropDownList("size", (List<SelectListItem>)ViewBag.size, new { @onchange = "this.form.submit();" })
+                                    @Html.Hidden("page", (object)ViewBag.page)
+                                    @Html.Hidden("sortProperty", (object)ViewBag.sortProperty)
+                                    @Html.Hidden("sortOrder", (object)ViewBag.sortOrder)
+                                    @Html.Hidden("searchString", (object)ViewBag.searchValue)
+                                </p>
+                            }
+                        </div>
+                    </div>
+
+
+                    <div class="search-box">
+                        @*<div class="input-group">
+
+                                @using (Html.BeginForm("Index", "AdminCRUD", FormMethod.Get))
+                                {
+
+                                    @Html.TextBox("searchString", (string)ViewBag.searchValue, new { @class = "form-control", @placeholder = "Search" }) <input type="submit" value="Tìm kiếm" />
+                                }
+
+                            </div>*@
+
+                        <form action="/QLMaGiamGia/Index" method="get" class="formsearch">
+                            <span class="input-group-addon"><i class="material-icons">&#xE8B6;</i></span>
+                            <input class="" id="searchString" name="searchString" placeholder="Search" type="search">
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Mã Giảm Giá</th>
+                        <th>Giá Trị</th>
+                        <th>Số Lượng</th>
+                        <th>Ngày Hết Hạn</th>
+                        
+                        <th><i class="fa fa-sort"></i> </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+
+                            <td>@Html.DisplayFor(modelItem => item.ID)</td>
+                            <td>@Html.DisplayFor(modelItem => item.MaGiamGia)</td>
+                            <td>@Html.DisplayFor(modelItem => item.GiaTri)</td>
+                            <td>@Html.DisplayFor(modelItem => item.SoLuong)</td>
+                            <td>@Html.DisplayFor(modelItem => item.NgayHetHan)</td>
+                            <td>
+                                <button type="button" rel="tooltip" class="btn btn-info btn-round btn-just-icon btn-sm" data-original-title="" title="">
+                                    <a href="@Url.Action("EditMa", "QLMaGiamGia", new { id = item.ID })">
+                                        <i class="material-icons">edit</i>
+                                    </a>
+                                </button>
+                          
+
+                                <button type="button" rel="tooltip" class="btn btn-danger btn-round btn-just-icon btn-sm" data-original-title="" title="">
+                                    <a href="@Url.Action("DeleteMa", "QLMaGiamGia", new { id = item.ID })">
+                                        <i class="material-icons">
+                                            close
+                                        </i>
+                                    </a>
+                                </button>
+                            </td>
+                        </tr>
+                    }
+
+
+
+                </tbody>
+            </table>
+            <div class="clearfix">
+                <div class="hint-text">Showing @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) out of @Model.PageCount entries</div>
+                <ul class="pagination">
+
+                    <li class="page-item">@Html.PagedListPager(Model, page => Url.Action("Index", new { page, size = ViewBag.currentSize }))</li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+

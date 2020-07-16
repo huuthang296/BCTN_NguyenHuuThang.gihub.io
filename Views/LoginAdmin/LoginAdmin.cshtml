@@ -1,0 +1,77 @@
+﻿@model MiniShopWebNHT.Models.ADMIN
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+
+
+<html background: #607D8B;>
+
+<head>
+    <link href="~/Assets/css/css/Loginadminss.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>LoginAdmin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script>
+        function validateLogin() {
+            var x = document.forms["myForm"]["UserName"].value;
+            var y = document.forms["myForm"]["Password"].value;
+
+            if (x == "" || y == "") {
+                alert("You need enter Email and Password");
+                return false;
+            }
+        }
+        function disablelogin() {
+            document.getElementById("UserName").disabled = true;
+            document.getElementById("Password").disabled = true;
+        }
+
+    </script>
+
+
+</head>
+<body>
+    <style>
+    </style>
+    <div class="login-ad">
+        <!--Sử dụng beginform truy vấn đến phường thức post-->
+        <form action="/LoginAdmin/LoginAdmin" method="post" name="myForm">
+
+            <div class="icon">
+                <div class="icon1">
+                    <i class="fa fa-user" style="font-size:30px"></i>
+
+                </div>
+
+                @{if (ViewBag.error != null)
+                    {
+                        <p style="color:red">@ViewBag.error</p>
+                    }
+                    else if (ViewBag.error == null)
+                    {
+                        <p style="color:white">Xin chào! Vui lòng đăng nhập.</p>
+                    }
+                }
+
+
+
+            </div>
+            <div class="div-login">
+                <input class="input-validation-error text-box single-line" data-val="true" id="TenDNAD" name="TenDNAD" placeholder="Email" type="text" value="">
+            </div>
+            <div class="div-login">
+                <input class="input-validation-error text-box single-line" data-val="true" id="MatKhauAD" name="MatKhauAD" placeholder="Password" type="password" value="">
+            </div>
+            <div>
+            </div>
+            <div class="div-login"> <button id="btnlogin" onclick="return validateLogin()"><i class='fas fa-arrow-right' style="font-size:24px; color:white"></i></button> </div>
+
+        </form>
+
+
+    </div>
+</body>
+</html>

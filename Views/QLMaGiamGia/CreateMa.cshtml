@@ -1,0 +1,88 @@
+﻿
+@{
+    ViewBag.Title = "CreateMa";
+    Layout = "~/Views/LayoutAdmin/_LayoutAdmin.cshtml";
+}
+
+<style>
+    .btncreate {
+        background-color: #F78181;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        color: white;
+    }
+</style>
+<script>
+    function validateCreate() {
+        var x = document.forms["myForm"]["MaGiamGia"].value;
+        var y = document.forms["myForm"]["GiaTri"].value;
+        var z = document.forms["myForm"]["SoLuong"].value;
+        //var g = document.forms["myForm"]["author"].value;
+        var h = document.forms["myForm"]["NgayHetHan"].value;
+      
+
+        if (x == "" || y == "" || z == "" || g == "" || h == "" || j == "" || k == "" || l == "") {
+            alert("Vui lòng điền đầy đủ thông tin Mã trước khi tạo !");
+            return false;
+        }
+    }
+
+</script>
+<h4 style="font-family:" Open Sans", Arial, sans-serif;">Thêm Mã Giảm Giá</h4>
+<hr />
+
+<form action="/QLMaGiamGia/Tao" method="post" name="myForm">
+    <div class="context">
+        <div class="text_left">
+            <p style="font-weight:bold;font-size:20px;">Thông tin Mã Giảm</p>
+            <br />
+
+
+            <table class="table_A">
+                <tr>
+                    <td>
+
+                        <input type="text" name="MaGiamGia" placeholder="Mã Giảm Giá">
+
+                    </td>
+
+                </tr>
+                <tr>
+                    <td><input type="text" name="GiaTri" placeholder="Giá Trị" /></td>
+                </tr>
+
+
+                <tr>
+                    <td><input type="text" name="SoLuong" placeholder="Số lượng" /></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="NgayHetHan" placeholder="Ngày hết hạn" /></td>
+                </tr>
+
+                
+
+            </table>
+            <br />
+
+            <div>
+                <a href="@Url.Action("Index","QLMaGiamGia")" class="btncreate"> Quay Lại</a>
+
+                <input type="submit" class="btncreate" onclick="return validateCreate()" style="width:165px; background-color:#74DF00" value="Tạo Sản Phẩm" />
+
+
+
+            </div>
+        </div>
+    
+        </div>  
+</form>
+
+
+

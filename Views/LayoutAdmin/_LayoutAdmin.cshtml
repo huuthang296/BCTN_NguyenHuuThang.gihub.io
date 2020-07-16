@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+
+<head>
+    <!-- Open Graph Meta-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Main CSS-->
+    <link href="~/Assets/css/css/mains.css" rel="stylesheet" />
+    <link href="~/Assets/css/css/main2.css" rel="stylesheet" />
+    <!-- Font-icon css-->
+    <link href="~/Assets/css/css/SiteS.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--them 2 casi nay-->
+    <link href="~/Assets/css/css/StyleSheet10.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="app sidebar-mini rtl" style="font-size:0.820rem;font-family:Arial">
+    <!-- Navbar-->
+    <aside>
+
+        <nav class="navbar fixed-top">
+            <a class="navbar-brand" href="#" style="color:#4c4949">Minishop</a>
+
+
+            <!--Notification Menu-->
+        </nav>
+    </aside>
+    <!-- Sidebar menu-->
+    <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+    <aside class="app-sidebar">
+        <div class="app-sidebar__user">
+
+            <img class="app-sidebar__user-avatar" style="width:20%" src="~/Assets/images/BoomBam.jpg" alt="User Image">
+            <div>
+
+                @{
+                    var x = Session["Online"];
+
+                }
+
+                <div>
+                    <p style="display:inline-block" class="app-sidebar__user-name">@Session["Username"]</p>
+                    @if (Session["Online"] == "Cancle")
+                    {
+
+                        <div style="border-radius:50%; background-color:red;height:9px; width:9px; display:inline-block;margin-bottom:7px; margin-left:5px"></div>
+
+                    }
+                    else
+                    {
+                        <div style="border-radius:50%; background-color:#17aa67;height:9px; width:9px; display:inline-block;margin-bottom:7px; margin-left:5px"></div>
+                    }
+                </div>
+                <p style="display:inline-block" class="app-sidebar__user-designation">@Session["Email"]</p>
+
+
+            </div>
+        </div>
+        <ul class="app-menu">
+            <li><a class="app-menu__item" href="@Url.Action("Index","AdminCRUD")"><i class="app-menu__icon fa fa-home"></i><span class="app-menu__label" style="color:#13d37b">Trang Chủ</span></a></li>
+
+            <li><a class="app-menu__item" href="@Url.Action("createLoaiSP","AdminCRUD")" data-toggle="treeview"><i class="app-menu__icon fa fa-tasks"></i><span class="app-menu__label">Quản Lý Loại Sản Phẩm</span></a></li>
+            <li><a class="app-menu__item" href="@Url.Action("ThongKe","ThongKe")" data-toggle="treeview"><i class="app-menu__icon fa fa-address-book"></i><span class="app-menu__label">Thông Kê Đơn Hàng</span></a></li>
+            <li><a class="app-menu__item" href="@Url.Action("HoaDon","ThongKe")" data-toggle="treeview"><i class="app-menu__icon fa fa-suitcase"></i><span class="app-menu__label">Quản Lý Hóa Đơn </span></a></li>
+            <li><a class="app-menu__item" href="@Url.Action("Index","AdminCRUD")" data-toggle="treeview"><i class="app-menu__icon fa fa-book"></i><span class="app-menu__label">Quản lý Sản Phẩm</span></a></li>
+            <li><a class="app-menu__item" href="@Url.Action("Index","QLMaGiamGia")" data-toggle="treeview"><i class="app-menu__icon fa fa-book"></i><span class="app-menu__label">Quản lý Mã Giảm Giá</span></a></li>
+            <li><a class="app-menu__item" href="@Url.Action("LoginAdmin","LoginAdmin")" data-toggle="treeview"><i class="app-menu__icon fa fa-sign-out"></i><span class="app-menu__label">Thoát</span></a></li>
+
+
+        </ul>
+    </aside>
+    <main class="app-content">
+        @RenderBody()
+    </main>
+
+    <!-- Essential javascripts for application to work-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- The javascript plugin to display page loading on top-->
+    <script src="js/plugins/pace.min.js"></script>
+    <!-- Page specific javascripts-->
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    @RenderSection("upload", required: false)
+
+    <script src="~/Assets/js/ThongKe.js"></script>
+
+
+</body>
+</html>

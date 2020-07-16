@@ -1,0 +1,110 @@
+﻿
+@{
+    ViewBag.Title = "createNhassanxuat";
+    Layout = "~/Views/LayoutAdmin/_LayoutAdmin.cshtml";
+}
+
+
+<style>
+    .frmauthor {
+        font-family: serif;
+    }
+
+    .btncreate {
+        background-color: #F78181;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        color: white;
+    }
+
+    table {
+        text-align: center;
+    }
+
+    th {
+        color: white;
+        background-color: #BDBDBD;
+    }
+</style>
+<script>
+    function validateCreate() {
+        var x = document.forms["myForm"]["TenLoai"].value;
+        var y = document.forms["myForm"]["MaLoai"].value;
+
+        if (x == "" || y == "") {
+            alert("Vui lòng điền đầy đủ thông tin sản phẩm trước khi tạo !");
+            return false;
+        }
+    }
+
+</script>
+<link href="~/Assets/css/css/CreateAll.css" rel="stylesheet" />
+<h4 style="font-family:"Open Sans", Arial, sans-serif;">Quản Lý Loại Sản Phẩm</h4>
+<hr />
+<form action="/AdminCRUD/createNhassanxuat" method="post" name="myForm">
+    <form class="frmauthor">
+        <div class="context">
+            <div class="text_left_author">
+                <p style="font-weight:bold;font-size:20px; font-family:serif">Thông tin loại sản phẩm</p>
+                <table class="table_Author">
+                    <tr>
+                        <td>
+
+                            <input type="text" name="TenLoai" placeholder="Tên loại sản phẩm">
+
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="MaLoai" placeholder="Mã Loại" /></td>
+                    </tr>
+
+                </table>
+                <br />
+
+
+
+
+                <div>
+                    <a href="@Url.Action("Index","AdminCRUD")" class="btncreate"> Quay Lại</a>
+
+                    <input type="submit" class="btncreate" onclick="return validateCreate()" style="width:204px; background-color:#74DF00" value="Tạo Loại Sản Phẩm" />
+
+
+
+                </div>
+            </div>
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Tên Loại</th>
+                        <th>Mã Loại</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in ViewBag.sklist)
+                    {
+                        <tr>
+
+                            <td>@item.TenLoai</td>
+                            <td>@item.MaLoai</td>
+
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+            <div class="text_right_author">
+
+            </div>
+        </div>
+    </form>
+</form>

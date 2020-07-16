@@ -1,0 +1,195 @@
+﻿@model MiniShopWebNHT.Models.MaGiam
+@{
+    ViewBag.Title = "EditMa";
+    Layout = "~/Views/LayoutAdmin/_LayoutAdmin.cshtml";
+}
+<link href="~/Assets/css/css/EditAdmin.css" rel="stylesheet" />
+<style>
+    .frmauthor {
+        font-family: serif;
+    }
+
+    .btncreate {
+        background-color: red;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        color: white;
+    }
+
+    table {
+        text-align: center;
+    }
+
+    th {
+        color: white;
+        background-color: #17aa67;
+    }
+</style>
+@*-------------------------------------*@
+@using (Html.BeginForm())
+{
+
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        <h4 style="font-family:" Open Sans", Arial, sans-serif;">Chỉnh Sửa Mã Giảm</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.ID)
+
+
+        <!–---------------------------PHẦN ĐẦU------------------------------–>
+        <div class="all" style="font-family:serif">
+
+
+
+            @*<div class="text">
+                @Html.EditorFor(model => model.MaLoai, new { htmlAttributes = new { @class = "form-control", @style = "display: none" } })
+                @Html.ValidationMessageFor(model => model.MaLoai, "", new { @class = "text-danger" })
+            </div>*@
+
+
+
+            @*<div class="col-md-1 col-lg-2">
+                    @Html.EditorFor(model => model.PubId, new { htmlAttributes = new { @class = "form-control", @style = "display: none" } })
+                    @Html.ValidationMessageFor(model => model.PubId, "", new { @class = "text-danger" })
+                </div>*@
+
+
+
+            <!–---------------------------PHẦN HAI------------------------------–>
+
+
+            <div class="two" style="margin-top:-27px">
+                <div class="infoBook">
+                    <label style="margin-top:6px; margin-left:10px">Thông tin Mã Giảm</label>
+                </div>
+
+                <!–---------------------------ROW 2------------------------------–>
+                <div class="row2">
+
+                    <div class="col-md-3 col-lg-2">
+                        <div class="form-group">
+                            <label class="control-label">ID</label>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-lg-2">
+                        <div class="form-group">
+                            @Html.EditorFor(model => model.ID, new { htmlAttributes = new { @class = "form-control", disabled = "disabled" } })
+                            @Html.ValidationMessageFor(model => model.ID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-3 col-lg-2">
+                        <div class="form-group">
+                            <label class="control-label">Mã Giảm Giá</label>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-lg-2">
+                        <div class="form-group">
+                            @Html.EditorFor(model => model.MaGiamGia, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.MaGiamGia, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+
+                <!–---------------------------ROW 3------------------------------–>
+
+
+                <div class="row3">
+                    <div class="col-md-1 col-lg-2" style="position:absolute">
+                        <div class="form-group">
+                            @Html.EditorFor(model => model.SoLuong, new { htmlAttributes = new { @class = "form-control", @style = "display: none" } })
+                            @Html.ValidationMessageFor(model => model.SoLuong, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="col-md-1 col-lg-2">
+                        <div class="form-group">
+                            <label class="control-label">Số Lượng</label>
+                        </div>
+                    </div>
+                    <div class="col-md-1 col-lg-2">
+                        <div class="form-group">
+                            @Html.EditorFor(model => model.SoLuong, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.SoLuong, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="col-md-1 col-lg-2">
+                        <div class="form-group">
+                            <label class="control-label">Giá Trị</label>
+                        </div>
+                    </div>
+                    <div class="col-md-1 col-lg-2">
+                        <div class="form-group">
+                            @Html.EditorFor(model => model.GiaTri, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.GiaTri, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <!–---------------------------ROW 4------------------------------–>
+
+                <div class="row4">
+
+
+
+
+                    <div class="col-md-1 col-lg-2">
+                        <div class="form-group">
+                            <label class="control-label">Ngày Hết Hạn</label>
+                        </div>
+                    </div>
+
+                    <div class="col-md-1 col-lg-2">
+                        <div class="form-group">
+                            <div class="input-group date">
+                                @Html.EditorFor(model => model.NgayHetHan, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.NgayHetHan, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+
+                    @*<div class="col-md-1 col-lg-2">
+                        <div class="form-group">
+                            <label class="control-label">Trạng Thái</label>
+                        </div>
+                    </div>
+                    <div class="col-md-1 col-lg-2">
+                        <div class="form-group">
+
+                            @Html.EditorFor(model => model.TrangThai, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.TrangThai, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>*@
+
+                
+
+               
+               
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <a href="@Url.Action("Index","QLMaGiamGia")" class="btncreate"> Quay Lại</a>
+
+                    <input type="submit" class="btncreate" style="width:130px; background-color:#17aa67" value="Lưu" />
+
+                </div>
+            </div>
+        </div>
+
+        
+}
+
+

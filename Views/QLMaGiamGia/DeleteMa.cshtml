@@ -1,0 +1,77 @@
+﻿
+@model MiniShopWebNHT.Models.MaGiam
+@{
+    ViewBag.Title = "DeleteMa";
+    Layout = "~/Views/LayoutAdmin/_LayoutAdmin.cshtml";
+}
+
+<style>
+    .btncreate {
+        background-color: #F78181;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        color: white;
+    }
+
+    th {
+        background-color: #BDBDBD;
+        color: white;
+    }
+
+    table {
+        border: solid 1px white;
+    }
+
+    td {
+        background-color: white;
+    }
+</style>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="w3-container w3-brown">
+        <h2>Xóa Mã Giảm Giá</h2>
+    </div>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th> @Html.DisplayNameFor(model => model.ID)</th>
+                <th> @Html.DisplayNameFor(model => model.MaGiamGia)</th>
+                <th> @Html.DisplayNameFor(model => model.GiaTri)</th>
+                <th> @Html.DisplayNameFor(model => model.SoLuong)</th>
+                <th> @Html.DisplayNameFor(model => model.NgayHetHan)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.MaGiamGia)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.GiaTri)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.SoLuong)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.NgayHetHan)
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="@Url.Action("Index","QLMaGiamGia")" class="btncreate"> Quay Lại</a>
+
+    <input type="submit" class="btncreate" onclick="return validateCreate()" style="width:165px; background-color:black" value="Xóa Mã" />
+
+}

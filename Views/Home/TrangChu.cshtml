@@ -1,0 +1,570 @@
+﻿
+@{
+    ViewBag.Title = "TrangChu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section id="home-section" class="hero">
+    <div class="home-slider owl-carousel">
+        <div class="slider-item js-fullheight">
+            <div class="overlay"></div>
+            <div class="container-fluid p-0">
+                <div class="row d-md-flex no-gutters slider-text align-items-center justify-content-end" data-scrollax-parent="true">
+                    <img class="one-third order-md-last img-fluid" src="/Assets/images/bg_1.png" alt="">
+                    <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                        <div class="text">
+                            <span class="subheading">#Hàng Mới Về</span>
+                            <div class="horizontal">
+                                <h1 class="mb-4 mt-3">Bộ Sưu Tập Giày 2019</h1>
+                                <p class="mb-4">Phong Cách - Cá Tính - Trẻ Trung</p>
+
+                                <p><a href="@Url.Action("SanPham", "Home")" class="btn-custom">Khám Phá Ngay</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider-item js-fullheight">
+            <div class="overlay"></div>
+            <div class="container-fluid p-0">
+                <div class="row d-flex no-gutters slider-text align-items-center justify-content-end" data-scrollax-parent="true">
+                    <img class="one-third order-md-last img-fluid" src="/Assets/images/bg_2.png" alt="">
+                    <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                        <div class="text">
+                            <span class="subheading">#Hàng Mới Về</span>
+                            <div class="horizontal">
+                                <h1 class="mb-4 mt-3">Bộ Sưu Tập Giày 2020</h1>
+                                <p class="mb-4">Phong Cách - Cá Tính - Trẻ Trung</p>
+
+                                <p><a href="@Url.Action("SanPham", "Home")" class="btn-custom">Khám Phá Ngay</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="ftco-section ftco-no-pt ftco-no-pb">
+    <div class="container">
+        <div class="row no-gutters ftco-services">
+            <div class="col-lg-4 text-center d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services p-4 py-md-5">
+                    <div class="icon d-flex justify-content-center align-items-center mb-4">
+                        <span class="flaticon-bag"></span>
+                    </div>
+                    <div class="media-body">
+                        <h3 class="heading">Miễn Phí Vận Chuyển</h3>
+                        <p>Đối với tất cả các đơn hàng có giá trị trên 3 triệu đồng</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services p-4 py-md-5">
+                    <div class="icon d-flex justify-content-center align-items-center mb-4">
+                        <span class="flaticon-customer-service"></span>
+                    </div>
+                    <div class="media-body">
+                        <h3 class="heading">Hỗ Trợ Khách Hàng</h3>
+                        <p>Chúng tôi luông cố gắng để hỗ trợ khách hàng một cách tốt nhất</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services p-4 py-md-5">
+                    <div class="icon d-flex justify-content-center align-items-center mb-4">
+                        <span class="flaticon-payment-security"></span>
+                    </div>
+                    <div class="media-body">
+                        <h3 class="heading">Thanh Toán An Toàn</h3>
+                        <p>Thanh toán an toàn 100%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="ftco-section bg-light">
+    <div class="container">
+        <div class="row justify-content-center mb-3 pb-3">
+            <div class="col-md-12 heading-section text-center ftco-animate">
+                <h2 class="mb-4">GIÀY MỚI</h2>
+                <p>Phong Cách - Cá Tính - Trẻ Trung</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
+                <div class="product d-flex flex-column">
+                    <a href="#" class="img-prod">
+                        <img class="img-fluid" src="/Assets/images/air-jordan-5.jpg" alt="Colorlib Template">
+                        <div class="overlay"></div>
+                    </a>
+                    <div class="text py-3 pb-4 px-3">
+                        <div class="d-flex">
+                            <div class="cat">
+                                <span>Nike</span>
+                            </div>
+                            <div class="rating">
+                                <p class="text-right mb-0">
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                </p>
+                            </div>
+                        </div>
+                        <h3><a href="#">Jordan 11 Retro White Metallic Silver</a></h3>
+                        <div class="pricing">
+                            <p class="price"><span>1,590,000</span></p>
+                        </div>
+                        <p class="bottom-area d-flex px-3">
+                            <a href="#" class="add-to-cart text-center py-2 mr-1"><span>Thêm Giỏ Hàng @*<i class="ion-ios-add ml-1"></i>*@</span></a>
+                            <a href="#" class="buy-now text-center py-2">Mua ngay<span><i class="ion-ios-cart ml-1"></i></span></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
+                <div class="product d-flex flex-column">
+                    <a href="#" class="img-prod">
+                        <img class="img-fluid" src="~/Assets/images/adidas-1.jpg" alt="Colorlib Template">
+                        <span class="status">Giảm giá 50%</span>
+                        <div class="overlay"></div>
+                    </a>
+                    <div class="text py-3 pb-4 px-3">
+                        <div class="d-flex">
+                            <div class="cat">
+                                <span>Adidas</span>
+                            </div>
+                            <div class="rating">
+                                <p class="text-right mb-0">
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                </p>
+                            </div>
+                        </div>
+                        <h3><a href="#">Pharrell Williams adidas Superstar</a></h3>
+                        <div class="pricing">
+                            <p class="price"><span class="mr-2 price-dc">3,900,000</span><span class="price-sale">2,900,000</span></p>
+                        </div>
+                        <p class="bottom-area d-flex px-3">
+                            <a href="#" class="add-to-cart text-center py-2 mr-1"><span>Thêm giỏ hàng @*<i class="ion-ios-add ml-1"></i>*@</span></a>
+                            <a href="#" class="buy-now text-center py-2">Mua ngay<span><i class="ion-ios-cart ml-1"></i></span></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
+                <div class="product">
+                    <a href="#" class="img-prod">
+                        <img class="img-fluid" src="/Assets/images/adidas-2.jpg" alt="Colorlib Template">
+                        <div class="overlay"></div>
+                    </a>
+                    <div class="text py-3 pb-4 px-3">
+                        <div class="d-flex">
+                            <div class="cat">
+                                <span>Adidas</span>
+                            </div>
+                            <div class="rating">
+                                <p class="text-right mb-0">
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                </p>
+                            </div>
+                        </div>
+                        <h3><a href="#">adidas NMD R1 Olympic Pack</a></h3>
+                        <div class="pricing">
+                            <p class="price"><span>2,900,000</span></p>
+                        </div>
+                        <p class="bottom-area d-flex px-3">
+                            <a href="#" class="add-to-cart text-center py-2 mr-1"><span>Thêm giỏ hàng @*<i class="ion-ios-add ml-1"></i>*@</span></a>
+                            <a href="#" class="buy-now text-center py-2">Mua ngay<span><i class="ion-ios-cart ml-1"></i></span></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
+                <div class="product">
+                    <a href="#" class="img-prod">
+                        <img class="img-fluid" src="/Assets/images/nike-air-8.jpg" alt="Colorlib Template">
+                        <div class="overlay"></div>
+                    </a>
+                    <div class="text py-3 pb-4 px-3">
+                        <div class="d-flex">
+                            <div class="cat">
+                                <span>Nike</span>
+                            </div>
+                            <div class="rating">
+                                <p class="text-right mb-0">
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                </p>
+                            </div>
+                        </div>
+                        <h3><a href="#">Nike Shox R4 Black Gold</a></h3>
+                        <div class="pricing">
+                            <p class="price"><span>3,900,000</span></p>
+                        </div>
+                        <p class="bottom-area d-flex px-3">
+                            <a href="#" class="add-to-cart text-center py-2 mr-1"><span>Thêm giỏ hàng @*<i class="ion-ios-add ml-1"></i>*@</span></a>
+                            <a href="#" class="buy-now text-center py-2">Mua ngay<span><i class="ion-ios-cart ml-1"></i></span></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
+                <div class="product d-flex flex-column">
+                    <a href="#" class="img-prod">
+                        <img class="img-fluid" src="/Assets/images/air-force-1.jpg" alt="Colorlib Template">
+                        <div class="overlay"></div>
+                    </a>
+                    <div class="text py-3 pb-4 px-3">
+                        <div class="d-flex">
+                            <div class="cat">
+                                <span>Nike</span>
+                            </div>
+                            <div class="rating">
+                                <p class="text-right mb-0">
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                </p>
+                            </div>
+                        </div>
+                        <h3><a href="#">Air Force 1 Sky Nike</a></h3>
+                        <div class="pricing">
+                            <p class="price"><span>3,000,000</span></p>
+                        </div>
+                        <p class="bottom-area d-flex px-3">
+                            <a href="#" class="add-to-cart text-center py-2 mr-1"><span>Thêm giỏ hàng @*<i class="ion-ios-add ml-1"></i>*@</span></a>
+                            <a href="#" class="buy-now text-center py-2">Mua ngay<span><i class="ion-ios-cart ml-1"></i></span></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
+                <div class="product d-flex flex-column">
+                    <a href="#" class="img-prod">
+                        <img class="img-fluid" src="/Assets/images/nike-air-7.jpg" alt="Colorlib Template">
+                        <span class="status">Giảm giá 50%</span>
+                        <div class="overlay"></div>
+                    </a>
+                    <div class="text py-3 pb-4 px-3">
+                        <div class="d-flex">
+                            <div class="cat">
+                                <span>Nike</span>
+                            </div>
+                            <div class="rating">
+                                <p class="text-right mb-0">
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                </p>
+                            </div>
+                        </div>
+                        <h3><a href="#">Nike Adapt Auto Max Black Green</a></h3>
+                        <div class="pricing">
+                            <p class="price"><span class="mr-2 price-dc">3,700,000</span><span class="price-sale">2,700,000</span></p>
+                        </div>
+                        <p class="bottom-area d-flex px-3">
+                            <a href="#" class="add-to-cart text-center py-2 mr-1"><span>Thêm giỏ hàng @*<i class="ion-ios-add ml-1"></i>*@</span></a>
+                            <a href="#" class="buy-now text-center py-2">Mua ngay<span><i class="ion-ios-cart ml-1"></i></span></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
+                <div class="product">
+                    <a href="#" class="img-prod">
+                        <img class="img-fluid" src="/Assets/images/adidas-3.jpg" alt="Colorlib Template">
+                        <div class="overlay"></div>
+                    </a>
+                    <div class="text py-3 pb-4 px-3">
+                        <div class="d-flex">
+                            <div class="cat">
+                                <span>Adidas</span>
+                            </div>
+                            <div class="rating">
+                                <p class="text-right mb-0">
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                </p>
+                            </div>
+                        </div>
+                        <h3><a href="#">adidas x Star Wars Ultra BOOST DNA Yoda</a></h3>
+                        <div class="pricing">
+                            <p class="price"><span>2,000,000</span></p>
+                        </div>
+                        <p class="bottom-area d-flex px-3">
+                            <a href="#" class="add-to-cart text-center py-2 mr-1"><span>Thêm giỏ hàng @*<i class="ion-ios-add ml-1"></i>*@</span></a>
+                            <a href="#" class="buy-now text-center py-2">Mua ngay<span><i class="ion-ios-cart ml-1"></i></span></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
+                <div class="product">
+                    <a href="#" class="img-prod">
+                        <img class="img-fluid" src="/Assets/images/adidas-4.jpg" alt="Colorlib Template">
+                        <div class="overlay"></div>
+                    </a>
+                    <div class="text py-3 pb-4 px-3">
+                        <div class="d-flex">
+                            <div class="cat">
+                                <span>Adidas</span>
+                            </div>
+                            <div class="rating">
+                                <p class="text-right mb-0">
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                    <a href="#"><span class="ion-ios-star-outline"></span></a>
+                                </p>
+                            </div>
+                        </div>
+                        <h3><a href="#">adidas Ultra Boost 20 White</a></h3>
+                        <div class="pricing">
+                            <p class="price"><span>2,790,000</span></p>
+                        </div>
+                        <p class="bottom-area d-flex px-3">
+                            <a href="#" class="add-to-cart text-center py-2 mr-1"><span>Thêm giỏ hàng @*<i class="ion-ios-add ml-1"></i>*@</span></a>
+                            <a href="#" class="buy-now text-center py-2">Mua ngay<span><i class="ion-ios-cart ml-1"></i></span></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section ftco-choose ftco-no-pb ftco-no-pt">
+    <div class="container">
+        <div class="row no-gutters">
+            <div class="col-lg-4">
+                <div class="choose-wrap divider-one img p-5 d-flex align-items-end" style="background-image: url(/Assets/images/choose-1.jpg);">
+                    <div class="text text-center text-white px-2">
+                        <span class="subheading">Giày Nam</span>
+                        <h2>Bộ sưu tập nam</h2>
+                        <p>Phong Cách - Cá Tính - Trẻ Trung</p>
+                        <p><a href="#" class="btn btn-black px-3 py-2">Mua ngay</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="row no-gutters choose-wrap divider-two align-items-stretch">
+                    <div class="col-md-12">
+                        <div class="choose-wrap full-wrap img align-self-stretch d-flex align-item-center justify-content-end" style="background-image: url(/Assets/images/choose-2.jpg);">
+                            <div class="col-md-7 d-flex align-items-center">
+                                <div class="text text-white px-5">
+                                    <span class="subheading">Giày Nữ</span>
+                                    <h2>Bộ sưu tập nữ</h2>
+                                    <p>Phong Cách - Cá Tính - Trẻ Trung</p>
+                                    <p><a href="#" class="btn btn-black px-3 py-2">Mua ngay</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="row no-gutters">
+                            <div class="col-md-6">
+                                <div class="choose-wrap wrap img align-self-stretch bg-light d-flex align-items-center">
+                                    <div class="text text-center px-5">
+                                        <span class="subheading">Giảm Giá Mùa Hè</span>
+                                        <h2>Giảm thêm 50%</h2>
+                                        <p>Phong Cách - Cá Tính - Trẻ Trung</p>
+                                        <p><a href="#" class="btn btn-black px-3 py-2">Mua ngay</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="choose-wrap wrap img align-self-stretch d-flex align-items-center" style="background-image: url(/Assets/images/choose-3.jpg);">
+                                    <div class="text text-center text-white px-5">
+                                        <span class="subheading">Giày</span>
+                                        <h2>Bán chạy nhất</h2>
+                                        <p>Phong Cách - Cá Tính - Trẻ Trung</p>
+                                        <p><a href="#" class="btn btn-black px-3 py-2">Mua ngay</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="ftco-section ftco-deal bg-primary">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="/Assets/images/prod-1.png" class="img-fluid" alt="">
+            </div>
+            <div class="col-md-6">
+                <div class="heading-section heading-section-white">
+                    <span class="subheading">Giao dịch của tháng</span>
+                    <h2 class="mb-3">Giao dịch của tháng</h2>
+                </div>
+                <div id="timer" class="d-flex mb-4">
+                    <div class="time" id="Ngày"></div>
+                    <div class="time pl-4" id="Giờ"></div>
+                    <div class="time pl-4" id="Phút"></div>
+                    <div class="time pl-4" id="Giây"></div>
+                </div>
+                <div class="text-deal">
+                    <h2><a href="#">Nike Free RN 2019 iD</a></h2>
+                    <p class="price"><span class="mr-2 price-dc">3,000,000đ</span><span class="price-sale">1,500,000đ</span></p>
+                    <ul class="thumb-deal d-flex mt-4">
+                        <li class="img" style="background-image: url(/Assets/images/product-6.png);"></li>
+                        <li class="img" style="background-image: url(/Assets/images/product-2.png);"></li>
+                        <li class="img" style="background-image: url(/Assets/images/product-4.png);"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="ftco-section testimony-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="services-flow">
+                    <div class="services-2 p-4 d-flex ftco-animate">
+                        <div class="icon">
+                            <span class="flaticon-bag"></span>
+                        </div>
+                        <div class="text">
+                            <h3>Miễn phí vẫn chuyển</h3>
+                            <p class="mb-0">Tất car các đơn hàng có giá trị từ 3 triệu đồng.</p>
+                        </div>
+                    </div>
+                    <div class="services-2 p-4 d-flex ftco-animate">
+                        <div class="icon">
+                            <span class="flaticon-heart-box"></span>
+                        </div>
+                        <div class="text">
+                            <h3>Quà tặng có giá trị</h3>
+                            <p class="mb-0">Có cơ hội nhận được nhiều phần quà hấp dẫn.</p>
+                        </div>
+                    </div>
+                    <div class="services-2 p-4 d-flex ftco-animate">
+                        <div class="icon">
+                            <span class="flaticon-payment-security"></span>
+                        </div>
+                        <div class="text">
+                            <h3>Thanh toán an toàn</h3>
+                            <p class="mb-0">Thanh toán an toàn 100%, uy tín chất lượng. </p>
+                        </div>
+                    </div>
+                    <div class="services-2 p-4 d-flex ftco-animate">
+                        <div class="icon">
+                            <span class="flaticon-customer-service"></span>
+                        </div>
+                        <div class="text">
+                            <h3>Hỗ trợ cả ngày</h3>
+                            <p class="mb-0">Luôn cố gắng hỗ trợ khách hàng một cách tốt nhất.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="heading-section ftco-animate mb-5">
+                    <h2 class="mb-4">Khách hàng hài lòng của chúng tôi nói</h2>
+                    <p>Uy tín luôn đặt trên hàng đầu , chất lượng luôn đảm bảo.</p>
+                </div>
+                <div class="carousel-testimony owl-carousel">
+                    <div class="item">
+                        <div class="testimony-wrap">
+                            <div class="user-img mb-4" style="background-image: url(/Assets/images/BoomBam.jpg)">
+                                <span class="quote d-flex align-items-center justify-content-center">
+                                    <i class="icon-quote-left"></i>
+                                </span>
+                            </div>
+                            <div class="text">
+                                <p class="mb-4 pl-4 line">Hãy luôn đồng hành cùng với chúng tôi, điều đó thật tuyệt vời.</p>
+                                <p class="name">Boom Bam</p>
+                                <span class="position">Giám đốc tiếp thị</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimony-wrap">
+                            <div class="user-img mb-4" style="background-image: url(/Assets/images/person_2.jpg)">
+                                <span class="quote d-flex align-items-center justify-content-center">
+                                    <i class="icon-quote-left"></i>
+                                </span>
+                            </div>
+                            <div class="text">
+                                <p class="mb-4 pl-4 line">Hãy luôn đồng hành cùng với chúng tôi, điều đó thật tuyệt vời.</p>
+                                <p class="name">Garreth Smith</p>
+                                <span class="position">Interface Designer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimony-wrap">
+                            <div class="user-img mb-4" style="background-image: url(/Assets/images/person_3.jpg)">
+                                <span class="quote d-flex align-items-center justify-content-center">
+                                    <i class="icon-quote-left"></i>
+                                </span>
+                            </div>
+                            <div class="text">
+                                <p class="mb-4 pl-4 line">Hãy luôn đồng hành cùng với chúng tôi, điều đó thật tuyệt vời.</p>
+                                <p class="name">Garreth Smith</p>
+                                <span class="position">UI Designer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimony-wrap">
+                            <div class="user-img mb-4" style="background-image: url(/Assets/images/person_1.jpg)">
+                                <span class="quote d-flex align-items-center justify-content-center">
+                                    <i class="icon-quote-left"></i>
+                                </span>
+                            </div>
+                            <div class="text">
+                                <p class="mb-4 pl-4 line">Hãy luôn đồng hành cùng với chúng tôi, điều đó thật tuyệt vời.</p>
+                                <p class="name">Garreth Smith</p>
+                                <span class="position">Web Developer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimony-wrap">
+                            <div class="user-img mb-4" style="background-image: url(/Assets/images/person_1.jpg)">
+                                <span class="quote d-flex align-items-center justify-content-center">
+                                    <i class="icon-quote-left"></i>
+                                </span>
+                            </div>
+                            <div class="text">
+                                <p class="mb-4 pl-4 line">Hãy luôn đồng hành cùng với chúng tôi, điều đó thật tuyệt vời.</p>
+                                <p class="name">Garreth Smith</p>
+                                <span class="position">System Analyst</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
