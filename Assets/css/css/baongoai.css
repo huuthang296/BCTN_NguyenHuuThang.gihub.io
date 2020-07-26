@@ -1,0 +1,31 @@
+﻿
+
+closefbchat {
+    position: relative;
+    display:inline-block;
+    
+    text-align: center;
+}
+
+
+
+.baongoai .fbchatclose {
+    visibility: hidden;
+
+}
+
+
+.baongoai .fbchatclose {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+
+
+
+
+
+
+
+
